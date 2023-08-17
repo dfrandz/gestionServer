@@ -1,0 +1,58 @@
+<section class="tw-bg-gray-100 tw-min-h-screen tw-flex tw-items-center tw-justify-center">
+
+    <div class="tw-bg-cyan-100 tw-flex tw-rounded-2xl tw-shadow-lg tw-max-w-3xl tw-p-5">
+        <div class="md:tw-w-1/2 md:tw-px-14 tw-pl-14">
+            <h2 class="tw-text-[#002D74] tw-font-bold tw-text-2xl">Login</h2>
+            <p class="tw-mt-4 tw-text-sm tw-text-[#002D74]">
+                If you already a member, easily log in
+            </p>
+
+            <form class="tw-flex tw-flex-col tw-gap-4" #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+                
+                <input type="email" placeholder="email" id="" ngModel name="email"  class="tw-p-2 tw-mt-8 tw-rounded-xl tw-border tw-text-[#002D74]" required>
+
+                <div class="tw-relative">
+                    <input class="tw-p-2 tw-rounded-xl tw-border tw-w-full tw-text-[#002D74]" type="password"  placeholder="Password" ngModel name="password" required>
+                    <!-- <button type="button" class="tw-absolute tw-inset-y-0 tw-right-0 tw-flex tw-items-center tw-pr-3">
+                         <svg class="tw-w-4 tw-h-4 tw-text-gray-500 dark:tw-text-gray-400 hover:tw-text-gray-900 dark:hover:tw-text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 20">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7v3a5.006 5.006 0 0 1-5 5H6a5.006 5.006 0 0 1-5-5V7m7 9v3m-3 0h6M7 1h2a3 3 0 0 1 3 3v5a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V4a3 3 0 0 1 3-3Z"/>
+                        </svg> 
+                    </button> -->
+                  </div>
+
+                <button  class="tw-bg-[#002D74] tw-p-2 tw-rounded-xl hover:tw-scale-105 tw-duration-300 tw-text-white" [disabled]="loginForm.invalid" type="submit">Login</button>
+                <div  class="tw-flex tw-justify-center">
+                    <!-- <img src="../../../assets/img/icons8-preloader.gif" alt=""> -->
+                </div>
+            </form>
+            
+            <div class="tw-grid tw-grid-cols-3 tw-mt-10 tw-items-center tw-text-gray-500">
+                <hr class="tw-border-gray-500">
+                <p class="tw-text-center">OR</p>
+                <hr class="tw-border-gray-500">
+            </div>
+
+            <button class="tw-bg-white tw-border tw-mb-4 tw-py-2 tw-w-full tw-rounded-xl tw-mt-5 tw-flex tw-justify-center tw-items-center tw-text-sm hover:tw-scale-105 tw-duration-300 tw-text-[#002D74]">
+                <svg class="mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="25px">
+                  <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z" />
+                  <path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z" />
+                  <path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z" />
+                  <path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z" />
+                </svg>
+                Login with Google
+            </button>
+
+            <p class="tw-text-[#002D74] tw-py-4 tw-border-b tw-border-black">Forgot your password?</p>
+
+            <div class="tw-flex tw-justify-between tw-items-center tw-mt-10 tw-text-xs">
+                <p class="tw-text-[#002D74]">Don't have an account?</p>
+                <button  class="tw-text-[#002D74] tw-py-2 tw-w-24 tw-bg-white tw-border tw-rounded-xl hover:tw-scale-110 tw-duration-300">Register</button>
+            </div>
+            
+        </div>
+
+        <div class="tw-w-1/2">
+            <img src="https://images.unsplash.com/photo-1616606103915-dea7be788566?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80" alt="" class="md:tw-block tw-hidden tw-rounded-2xl">
+        </div>
+    </div>
+</section>

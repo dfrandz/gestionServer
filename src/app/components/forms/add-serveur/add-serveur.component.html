@@ -1,0 +1,53 @@
+<section class="tw-px-[20px] tw-mt-[25px] md:tw-flex tw-justify-center  tw-gap-4" >
+
+    <div class="md:tw-p-6 tw-px-8 tw-p-2">
+        <!-- content here  -->
+        <h1 class="tw-text-gray-950 tw-font-bold tw-text-lg tw-py-[30px]">Enregistrement de Serveur hiii</h1>
+        <div *ngIf="(serverState$ | async) as serverState" [ngSwitch]="serverState.dataState">
+            <div *ngSwitchCase="DataInfo.LOADING_STATE">
+                <p class="tw-text-black tw-text-center">en cours de chargement</p>
+            </div>
+        </div>
+<!-- {{serverState$ | async| json}} -->
+        <form  #serverForm="ngForm" (ngSubmit)="saveServer(serverForm)">
+            <div class="tw-flex tw-flex-col md:tw-flex-row tw-gap-4">
+                <div class="tw-flex tw-flex-col">
+                    <label for="Fullname" class="tw-text-sm tw-text-gray-700">Ip Address*</label>
+                    <input type="text" ngModel name="ipAddress" class="tw-p-1 tw-rounded-sm tw-border tw-text-[#002D74]">
+                </div>
+                <div class="tw-flex tw-flex-col">
+                    <label for="Fullname" class="tw-text-sm tw-text-gray-700">Name</label>
+                    <input type="text" ngModel name="name" class="tw-p-1 tw-rounded-sm tw-border tw-text-[#002D74]" required="">
+                </div>
+                <div class="tw-flex tw-flex-col">
+                    <label for="Fullname" class="tw-text-sm tw-text-gray-700">Memory</label>
+                    <input type="text" ngModel name="memory" class="tw-p-1 tw-rounded-sm tw-border tw-text-[#002D74]" required="">
+                </div>
+            </div>
+        
+            <div class="tw-flex tw-flex-col md:tw-flex-row tw-gap-4 tw-mt-5">
+                <div class="tw-flex tw-flex-col">
+                    <label for="Fullname" class="tw-text-sm tw-text-gray-700">Type</label>
+                    <input type="text" ngModel name="type" class="tw-p-1 tw-rounded-sm tw-border tw-text-[#002D74]" required="">
+                </div>
+                <div class="tw-flex tw-flex-col">
+                    <label for="Fullname" class="tw-text-sm tw-text-gray-700">Status</label>
+                    <select type="text" ngModel="SERVER_DOWN" name="status" class="tw-p-1 tw-rounded-sm tw-border tw-text-[#002D74]" required> 
+                        <option value="ALL">ALL</option>
+                        <option value="SERVER_UP">SERVER_UP</option>
+                        <option value="SERVER_DOWN">SERVER_DOWN</option>
+                    </select>
+                </div>
+                <!-- <div class="tw-flex tw-flex-col">
+                    <label for="Fullname" class="tw-text-sm tw-text-gray-700">Age</label>
+                    <input type="text" class="tw-bg-[#F8F9FC] tw-h-[40px] tw-outline-none tw-pl-[13px] md:tw-w-[220px] tw-w-[150px] tw-rounded-[5px] placeholder:tw-text-[14px] tw-leading-[20px] tw-font-normal" placeholder="Search for...">
+                </div> -->
+            </div>
+           
+            <div class="tw-flex tw-gap-2 tw-mt-10 tw-justify-end">
+                <button  class="tw-text-white tw-text-lg tw-p-2 tw-bg-blue-600 tw-px-5 tw-rounded-lg" [disabled]="serverForm.invalid || (isLoading$ | async)">Save</button>
+                <button  class="tw-text-white tw-text-lg tw-p-2 tw-bg-red-500 tw-px-5 tw-rounded-lg">Reset</button>
+            </div>
+        </form>
+    </div>
+</section>

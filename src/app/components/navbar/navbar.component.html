@@ -1,0 +1,252 @@
+<div class="tw-flex">
+    <div class="tw-basis-[12%] tw-h-[100vh] lg:tw-flex tw-transition tw-duration-500 md:tw-relative" [class]=" openSideBare ? '' :'tw-hidden' ">
+        <div class="tw-bg-[#363753] tw-h-screen tw-px-[20px] xl:tw-fixed tw-w-[12.2rem] tw-overflow-scroll  tw-transition tw-duration-300 tw-ease-in-out">
+            <div class="tw-px-[15px] tw-py-[15px] tw-flex tw-items-center tw-justify-center tw-border-b-[1px] tw-border-[#EDEDED]/[0.3]">
+                <!-- <h1 class="tw-text-white tw-text-[20px] tw-leading-[20px] tw-font-extrabold tw-cursor-pointer">Admin panel</h1> -->
+                <img src="../../../assets/images/terra.png" alt="" class="">
+            </div>
+        
+            <div class="tw-flex tw-items-center tw-gap-[15px] tw-py-[15px] tw-border-b-[1px] tw-border-[#EDEDED]/[0.3] hover:tw-scale-105 tw-duration-300 
+            ">
+                <svg width="20px" height="20px" viewBox="0 0 64 64" fill="white" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_14_1960)">
+                    <path d="M25.545 8H11C9.34315 8 8 9.34315 8 11V28.931C8 30.5879 9.34315 31.931 11 31.931H25.545C27.2019 31.931 28.545 30.5879 28.545 28.931V11C28.545 9.34315 27.2019 8 25.545 8Z" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M52.94 8H38.395C36.7382 8 35.395 9.34315 35.395 11V15.272C35.395 16.9289 36.7382 18.272 38.395 18.272H52.94C54.5969 18.272 55.94 16.9289 55.94 15.272V11C55.94 9.34315 54.5969 8 52.94 8Z" stroke="#426AB2" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M52.94 25.121H38.395C36.7382 25.121 35.395 26.4641 35.395 28.121V52.94C35.395 54.5969 36.7382 55.94 38.395 55.94H52.94C54.5969 55.94 55.94 54.5969 55.94 52.94V28.121C55.94 26.4641 54.5969 25.121 52.94 25.121Z" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M25.545 38.818H11C9.34315 38.818 8 40.1611 8 41.818V52.939C8 54.5958 9.34315 55.939 11 55.939H25.545C27.2019 55.939 28.545 54.5958 28.545 52.939V41.818C28.545 40.1611 27.2019 38.818 25.545 38.818Z" stroke="#426AB2" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_14_1960">
+                    <rect width="51.94" height="51.939" fill="white" transform="translate(6 6)"/>
+                    </clipPath>
+                    </defs>
+                </svg>
+                <p class="tw-text-[14px] tw-leading-[20px] tw-font-bold tw-text-white ">
+                  <a [routerLink]="['dashboard']" routerLinkActive="router-link-active" >Dashboard</a>  
+                </p>
+            </div>
+        
+            <div class="tw-pt-[15px] tw-border-b-[1px] tw-border-[#EDEDED]/[0.3]">
+                <p class="tw-text-white/[0.4] tw-text-[10px] tw-font-extrabold tw-leading-[16px]">INTERFACE</p>
+                
+                <!-- pages -->
+                <div class="tw-flex tw-items-center tw-justify-between tw-gap-[10px] tw-py-[10px] tw-cursor-pointer hover:tw-scale-105 tw-duration-300 " (click)="showServeurList()">
+        
+                    <div class="tw-flex tw-items-center tw-gap-[10px]">
+                        <svg width="20px" height="20px" viewBox="0 0 24 24" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
+        
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                            
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                            
+                            <g id="SVGRepo_iconCarrier"> <path d="M16.5098 5.01L14.5498 3.05C13.1498 1.65 10.8498 1.65 9.44977 3.05L7.48977 5.01C7.09977 5.4 7.09977 6.04 7.48977 6.43L11.2998 10.24C11.6898 10.63 12.3198 10.63 12.7098 10.24L16.5198 6.43C16.8998 6.04 16.8998 5.4 16.5098 5.01Z" fill="#292D32"/> <path d="M5.01 7.49172L3.05 9.45172C1.65 10.8517 1.65 13.1517 3.05 14.5517L5.01 16.5117C5.4 16.9017 6.03 16.9017 6.42 16.5117L10.23 12.7017C10.62 12.3117 10.62 11.6817 10.23 11.2917L6.43 7.49172C6.04 7.10172 5.4 7.10172 5.01 7.49172Z" fill="#292D32"/> <path d="M20.9491 9.45172L18.9891 7.49172C18.5991 7.10172 17.9691 7.10172 17.5791 7.49172L13.7691 11.3017C13.3791 11.6917 13.3791 12.3217 13.7691 12.7117L17.5791 16.5217C17.9691 16.9117 18.5991 16.9117 18.9891 16.5217L20.9491 14.5617C22.3491 13.1517 22.3491 10.8517 20.9491 9.45172Z" fill="#292D32"/> <path d="M7.48907 18.9891L9.44907 20.9491C10.8491 22.3491 13.1491 22.3491 14.5491 20.9491L16.5091 18.9891C16.8991 18.5991 16.8991 17.9691 16.5091 17.5791L12.6991 13.7691C12.3091 13.3791 11.6791 13.3791 11.2891 13.7691L7.47907 17.5791C7.09907 17.9591 7.09907 18.5991 7.48907 18.9891Z" fill="#292D32"/> </g>
+                            
+                        </svg>
+                        <p class="tw-text-white tw-text-[14px] tw-font-normal ">Serveurs</p>
+                    </div>
+                    <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" [class]="subMenuOpen ?'tw-rotate-90' : '' "  >
+                        <path d="M9 6L15 12L9 18" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="tw-pt-2 tw-pl-4" [class]=" subMenuOpen? '' : 'tw-hidden'">
+                    <ul class="tw-flex tw-flex-col tw-pl-2 tw-text-gray-500 tw-border-gray-700 tw-gap-[1px]">
+                        <li class="tw-text-[14px] tw-leading-[20px] tw-font-bold tw-text-white tw-py-[10px] tw-cursor-pointer hover:tw-scale-105 tw-duration-300 hover:tw-px-[10px]"> <a routerLink="server">Servers List</a></li>
+                    </ul>
+                </div>
+                <!-- pages -->
+
+                <!-- pages -->
+                <div class="tw-flex tw-items-center tw-justify-between tw-gap-[10px] tw-py-[10px] tw-cursor-pointer hover:tw-scale-105 tw-duration-300 " (click)="showDataList()">
+                    <div class="tw-flex tw-items-center tw-gap-[10px]">
+                        <svg width="20px" height="20px" viewBox="0 0 24 24" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                            
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                            
+                            <g id="SVGRepo_iconCarrier"> <path d="M16.5098 5.01L14.5498 3.05C13.1498 1.65 10.8498 1.65 9.44977 3.05L7.48977 5.01C7.09977 5.4 7.09977 6.04 7.48977 6.43L11.2998 10.24C11.6898 10.63 12.3198 10.63 12.7098 10.24L16.5198 6.43C16.8998 6.04 16.8998 5.4 16.5098 5.01Z" fill="#292D32"/> <path d="M5.01 7.49172L3.05 9.45172C1.65 10.8517 1.65 13.1517 3.05 14.5517L5.01 16.5117C5.4 16.9017 6.03 16.9017 6.42 16.5117L10.23 12.7017C10.62 12.3117 10.62 11.6817 10.23 11.2917L6.43 7.49172C6.04 7.10172 5.4 7.10172 5.01 7.49172Z" fill="#292D32"/> <path d="M20.9491 9.45172L18.9891 7.49172C18.5991 7.10172 17.9691 7.10172 17.5791 7.49172L13.7691 11.3017C13.3791 11.6917 13.3791 12.3217 13.7691 12.7117L17.5791 16.5217C17.9691 16.9117 18.5991 16.9117 18.9891 16.5217L20.9491 14.5617C22.3491 13.1517 22.3491 10.8517 20.9491 9.45172Z" fill="#292D32"/> <path d="M7.48907 18.9891L9.44907 20.9491C10.8491 22.3491 13.1491 22.3491 14.5491 20.9491L16.5091 18.9891C16.8991 18.5991 16.8991 17.9691 16.5091 17.5791L12.6991 13.7691C12.3091 13.3791 11.6791 13.3791 11.2891 13.7691L7.47907 17.5791C7.09907 17.9591 7.09907 18.5991 7.48907 18.9891Z" fill="#292D32"/> </g>
+                        </svg>
+                        <p class="tw-text-white tw-text-[14px] tw-font-normal ">Data</p>
+                    </div>
+                    <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" [class]="subDataOpen ?'tw-rotate-90' : '' "  >
+                        <path d="M9 6L15 12L9 18" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="tw-pt-2 tw-pl-4" [class]=" subDataOpen ? '' : 'tw-hidden'">
+                    <ul class="tw-flex tw-flex-col tw-pl-2 tw-text-gray-500 tw-border-gray-700 tw-gap-[1px]">
+                        <li class="tw-text-[14px] tw-leading-[20px] tw-font-bold tw-text-white tw-py-[10px] tw-cursor-pointer hover:tw-scale-105 tw-duration-300 hover:tw-px-[10px]"> <a routerLink="server">Servers List</a></li>
+                        <li class="tw-text-[14px] tw-leading-[20px] tw-font-bold tw-text-white tw-py-[10px] tw-cursor-pointer hover:tw-scale-105 tw-duration-300 hover:tw-px-[10px]"> <a [routerLink]="['serveur-add']" routerLinkActive="router-link-active" > Serveur Add</a></li>
+                        <li class="tw-text-[14px] tw-leading-[20px] tw-font-bold tw-text-white tw-py-[10px] tw-cursor-pointer hover:tw-scale-105 tw-duration-300 hover:tw-px-[10px]">List student</li>
+                    </ul>
+                </div>
+                <!-- pages -->
+
+                
+                
+            </div>
+        
+            <div class="tw-pt-[15px] tw-border-b-[1px] tw-border-[#EDEDED]/[0.3]">
+                <p class="tw-text-white/[0.4] tw-text-[10px] tw-font-extrabold tw-leading-[16px]">ADDONS</p>
+        
+                <!-- component -->
+                <div class="tw-flex tw-items-center tw-justify-between tw-gap-[10px] tw-py-[10px] tw-cursor-pointer hover:tw-scale-105 tw-duration-300" (click)="showComponentList()">
+        
+                    <div class="tw-flex tw-items-center tw-gap-[10px]">
+                        <svg width="20px" height="20px" viewBox="0 0 24 24" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
+        
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                            
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                            
+                            <g id="SVGRepo_iconCarrier"> <path d="M16.5098 5.01L14.5498 3.05C13.1498 1.65 10.8498 1.65 9.44977 3.05L7.48977 5.01C7.09977 5.4 7.09977 6.04 7.48977 6.43L11.2998 10.24C11.6898 10.63 12.3198 10.63 12.7098 10.24L16.5198 6.43C16.8998 6.04 16.8998 5.4 16.5098 5.01Z" fill="#292D32"/> <path d="M5.01 7.49172L3.05 9.45172C1.65 10.8517 1.65 13.1517 3.05 14.5517L5.01 16.5117C5.4 16.9017 6.03 16.9017 6.42 16.5117L10.23 12.7017C10.62 12.3117 10.62 11.6817 10.23 11.2917L6.43 7.49172C6.04 7.10172 5.4 7.10172 5.01 7.49172Z" fill="#292D32"/> <path d="M20.9491 9.45172L18.9891 7.49172C18.5991 7.10172 17.9691 7.10172 17.5791 7.49172L13.7691 11.3017C13.3791 11.6917 13.3791 12.3217 13.7691 12.7117L17.5791 16.5217C17.9691 16.9117 18.5991 16.9117 18.9891 16.5217L20.9491 14.5617C22.3491 13.1517 22.3491 10.8517 20.9491 9.45172Z" fill="#292D32"/> <path d="M7.48907 18.9891L9.44907 20.9491C10.8491 22.3491 13.1491 22.3491 14.5491 20.9491L16.5091 18.9891C16.8991 18.5991 16.8991 17.9691 16.5091 17.5791L12.6991 13.7691C12.3091 13.3791 11.6791 13.3791 11.2891 13.7691L7.47907 17.5791C7.09907 17.9591 7.09907 18.5991 7.48907 18.9891Z" fill="#292D32"/> </g>
+                            
+                        </svg>
+                        <p class="tw-text-white tw-text-[14px] tw-font-normal ">Components</p>
+                    </div>
+                    <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" [class]="subComponentOpen ?'tw-rotate-90' : '' ">
+                        <path d="M9 6L15 12L9 18" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+        
+                </div>
+                <div class="tw-pt-2 tw-pl-4" [class]=" subComponentOpen? '' : 'tw-hidden'">
+                    <ul class="tw-flex tw-flex-col tw-pl-2 tw-text-gray-500 tw-border-gray-700 tw-gap-[1px]">
+                        <li class="tw-text-[14px] tw-leading-[20px] tw-font-bold tw-text-white tw-py-[10px] tw-cursor-pointer hover:tw-scale-105 tw-duration-300 hover:tw-px-[10px]"> <a routerLink="formulaires">Formulaires</a></li>
+                        <li class="tw-text-[14px] tw-leading-[20px] tw-font-bold tw-text-white tw-py-[10px] tw-cursor-pointer hover:tw-scale-105 tw-duration-300 hover:tw-px-[10px]"> <a routerLink="card">Cards</a> </li>
+                        <li class="tw-text-[14px] tw-leading-[20px] tw-font-bold tw-text-white tw-py-[10px] tw-cursor-pointer hover:tw-scale-105 tw-duration-300 hover:tw-px-[10px]">List student</li>
+                    </ul>
+                </div>
+                <!-- component -->
+
+                <!-- tools -->
+                
+                <div class="tw-flex tw-items-center tw-justify-between tw-gap-[10px] tw-py-[10px] tw-cursor-pointer hover:tw-scale-105 tw-duration-300">
+                    <div class="tw-flex tw-items-center tw-gap-[10px]">
+                        <svg width="20px" height="20px" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" fill="#ffffff">
+        
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                            
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                            
+                            <g id="SVGRepo_iconCarrier"> <title>grid</title> <desc>Created with Sketch Beta.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage"> <g id="Icon-Set-Filled" sketch:type="MSLayerGroup" transform="translate(-104.000000, -935.000000)" fill="#ffff"> <path d="M128,935 L124,935 C121.791,935 120,936.791 120,939 L120,943 C120,945.209 121.791,947 124,947 L128,947 C130.209,947 132,945.209 132,943 L132,939 C132,936.791 130.209,935 128,935 L128,935 Z M128,951 L124,951 C121.791,951 120,952.791 120,955 L120,959 C120,961.209 121.791,963 124,963 L128,963 C130.209,963 132,961.209 132,959 L132,955 C132,952.791 130.209,951 128,951 L128,951 Z M112,951 L108,951 C105.791,951 104,952.791 104,955 L104,959 C104,961.209 105.791,963 108,963 L112,963 C114.209,963 116,961.209 116,959 L116,955 C116,952.791 114.209,951 112,951 L112,951 Z M112,935 L108,935 C105.791,935 104,936.791 104,939 L104,943 C104,945.209 105.791,947 108,947 L112,947 C114.209,947 116,945.209 116,943 L116,939 C116,936.791 114.209,935 112,935 L112,935 Z" id="grid" sketch:type="MSShapeGroup"> </path> </g> </g> </g>
+                            
+                        </svg>
+                        <p class="tw-text-white tw-text-[14px] tw-font-normal">Tables</p>
+                    </div>
+                </div>
+                <!-- tools -->
+            </div>
+        
+         
+            <div class="tw-flex tw-justify-center tw-items-center tw-pt-[15px]">
+                <div class="tw-h-[40px] tw-w-[40px] tw-bg-[#3C5EC1] tw-rounded-full tw-flex tw-items-center tw-justify-center tw-cursor-pointer">
+                    <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                        
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                        
+                        <g id="SVGRepo_iconCarrier"> <path d="M15 6L9 12L15 18" stroke="#ffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> </g>
+                        
+                    </svg>
+                </div>
+            </div>
+        
+            <div class="tw-bg-[#395CBF] tw-mt-[15px] tw-flex tw-flex-col tw-items-center tw-justify-center tw-py-[15px] tw-px-[10px] tw-gap-[15px] tw-rounded-[3px]">
+        
+                <p class="tw-text-[12px] tw-leading-[18px] tw-font-normal tw-text-white/[0.4] tw-text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                <button class="tw-bg-[#17A673] tw-text-white tw-flex tw-items-center tw-justify-center tw-h-[30px] tw-w-full tw-rounded-[3px] tw-leading-[21px] tw-font-normal">Upgrade</button>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    <div class="tw-basis-[88%] tw-border">
+        <div class="tw-flex tw-items-cneter tw-justify-between tw-h-[70px] tw-shadow-lg tw-px-[40px]">
+            <!-- search bar -->
+            <div class="tw-flex tw-items-center tw-rounded-[5px]">
+                <input type="text" class="tw-bg-[#F8F9FC] tw-h-[40px] tw-outline-none tw-pl-[13px] md:tw-w-[350px] tw-w-[150px] tw-rounded-[5px] placeholder:tw-text-[14px] tw-leading-[20px] tw-font-normal" placeholder="Search for...">
+                <div class="tw-bg-[#4E73DF] tw-hidden tw-h-[40px] tw-px-[14px] sm:tw-flex tw-items-center tw-justify-center tw-cursor-pointer tw-rounded-tr-[5px] tw-rounded-br-[5px]">
+                    <svg width="20px" height="20px" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.9536 14.9458L21 21M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
+            <!-- search bar -->
+        
+            <div class="tw-flex tw-items-center tw-gap-[15px] tw-relative">
+                <div class="tw-flex tw-items-center tw-gap-[25px] tw-border-r-[1px] tw-pr-[25px]">
+                    <div class="tw-flex tw-items-center tw-gap-[25px] tw-relative">
+                        <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_15_159)">
+                            <rect width="24" height="24" fill="white"/>
+                            <path d="M9.5 19C8.89555 19 7.01237 19 5.61714 19C4.87375 19 4.39116 18.2177 4.72361 17.5528L5.57771 15.8446C5.85542 15.2892 6 14.6774 6 14.0564C6 13.2867 6 12.1434 6 11C6 9 7 5 12 5C17 5 18 9 18 11C18 12.1434 18 13.2867 18 14.0564C18 14.6774 18.1446 15.2892 18.4223 15.8446L19.2764 17.5528C19.6088 18.2177 19.1253 19 18.382 19H14.5M9.5 19C9.5 21 10.5 22 12 22C13.5 22 14.5 21 14.5 19M9.5 19C11.0621 19 14.5 19 14.5 19" stroke="#000000" stroke-linejoin="round"/>
+                            <path d="M12 5V3" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_15_159">
+                            <rect width="24" height="24" fill="white"/>
+                            </clipPath>
+                            </defs>
+                        </svg>
+                        <!-- <div class="tw-bg-white tw-border tw-h-[120px] tw-w-[150px] tw-absolute tw-bottom-[-135px] tw-z-20 tw-right-0 tw-pt-[15px] tw-pl-[15px] tw-space-y-[10px]">
+                            <p class="tw-cursor-pointer hover:tw-text-[blue] tw-font-semibold">Profiles</p>
+                            <p class="tw-cursor-pointer hover:tw-text-[blue] tw-font-semibold">Settings</p>
+                            <p class="tw-cursor-pointer hover:tw-text-[blue] tw-font-semibold">Log out</p>
+                        </div> -->
+                    </div>
+                    <div class="tw-flex tw-items-center tw-gap-[25px] tw-relative">
+                        <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                 width="20px" height="20px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+            <g>
+                <path fill="#231F20" d="M43.416,35.812c-0.448-0.322-0.55-0.947-0.228-1.396c0.321-0.448,0.947-0.55,1.396-0.228L64,48.168V15.475
+                    L32.597,38.803C32.419,38.935,32.21,39,32,39s-0.419-0.065-0.597-0.197L0,15.475v32.693l19.416-13.979
+                    c0.449-0.321,1.073-0.22,1.396,0.228c0.322,0.448,0.221,1.073-0.228,1.396L0,50.632V52c0,2.211,1.789,4,4,4h56c2.211,0,4-1.789,4-4
+                    v-1.368L43.416,35.812z"/>
+                <path fill="#231F20" d="M32,36.754l32-23.771V12c0-2.211-1.789-4-4-4H4c-2.211,0-4,1.789-4,4v0.982L32,36.754z"/>
+            </g>
+                        </svg>
+        
+                        <!-- <div class="tw-bg-white tw-border tw-h-[120px] tw-w-[150px] tw-absolute tw-bottom-[-135px] tw-z-20 tw-right-0 tw-pt-[15px] tw-pl-[15px] tw-space-y-[10px]">
+                            <p class="tw-cursor-pointer hover:tw-text-[blue] tw-font-semibold">Profiles</p>
+                            <p class="tw-cursor-pointer hover:tw-text-[blue] tw-font-semibold">Settings</p>
+                            <p class="tw-cursor-pointer hover:tw-text-[blue] tw-font-semibold">Log out</p>
+                        </div> -->
+                    </div>
+                   
+                </div>
+                <div class="tw-flex tw-items-center tw-gap-[25px] tw-relative" >
+                    <p class="md:tw-flex tw-hidden tw-cursor-pointer" (click)="showDropDownProfile()">TONOU Fandz</p>
+                    <div class="tw-bg-[#4E73DF] tw-cursor-pointer tw-flex tw-items-center tw-rounded-3xl tw-justify-center tw-relative" (click)="showDropDownProfile()">
+                        <img src="../../../assets/images/petit.jpg" width="40px" height="40px" class="tw-rounded-full" alt="">
+                    </div>
+        
+                    <div *ngIf="profileDropDown" class="tw-bg-white tw-border tw-h-[120px] tw-w-[150px] tw-absolute tw-bottom-[-135px] tw-z-20 tw-right-0 tw-pt-[15px] tw-pl-[15px] tw-space-y-[10px] tw-transition tw-duration-300">
+                        <p class="tw-cursor-pointer hover:tw-text-[blue] tw-font-semibold">Profiles</p>
+                        <p class="tw-cursor-pointer hover:tw-text-[blue] tw-font-semibold">Settings</p>
+                        <p (click)="logOut()" class="tw-cursor-pointer hover:tw-text-[blue] tw-font-semibold">Log out</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class=""> 
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+
+    <!--  -->
+</div>
+
+<div class="tw-flex tw-items-end tw-justify-end md:tw-hidden">
+    <button (click)="toogleSidebar()" class="tw-fixed md:tw-hidden tw-z-90 tw-bottom-10 tw-right-10 tw-bg-teal-800 tw-w-10 tw-h-10 tw-rounded-full tw-drop-shadow-lg tw-flex tw-justify-center tw-items-center tw-text-white hover:tw-bg-teal-800 tw-duration-300">
+        <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+            <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+            
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+            
+            <g id="SVGRepo_iconCarrier"> <g id="Menu / More_Grid_Big"> <g id="Vector"> <path d="M17 18C17 18.5523 17.4477 19 18 19C18.5523 19 19 18.5523 19 18C19 17.4477 18.5523 17 18 17C17.4477 17 17 17.4477 17 18Z" stroke="#ffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> <path d="M11 18C11 18.5523 11.4477 19 12 19C12.5523 19 13 18.5523 13 18C13 17.4477 12.5523 17 12 17C11.4477 17 11 17.4477 11 18Z" stroke="#ffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> <path d="M5 18C5 18.5523 5.44772 19 6 19C6.55228 19 7 18.5523 7 18C7 17.4477 6.55228 17 6 17C5.44772 17 5 17.4477 5 18Z" stroke="#ffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> <path d="M17 12C17 12.5523 17.4477 13 18 13C18.5523 13 19 12.5523 19 12C19 11.4477 18.5523 11 18 11C17.4477 11 17 11.4477 17 12Z" stroke="#ffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> <path d="M11 12C11 12.5523 11.4477 13 12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12Z" stroke="#ffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> <path d="M5 12C5 12.5523 5.44772 13 6 13C6.55228 13 7 12.5523 7 12C7 11.4477 6.55228 11 6 11C5.44772 11 5 11.4477 5 12Z" stroke="#ffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> <path d="M17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5C17.4477 5 17 5.44772 17 6Z" stroke="#ffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> <path d="M11 6C11 6.55228 11.4477 7 12 7C12.5523 7 13 6.55228 13 6C13 5.44772 12.5523 5 12 5C11.4477 5 11 5.44772 11 6Z" stroke="#ffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> <path d="M5 6C5 6.55228 5.44772 7 6 7C6.55228 7 7 6.55228 7 6C7 5.44772 6.55228 5 6 5C5.44772 5 5 5.44772 5 6Z" stroke="#ffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> </g> </g> </g>
+            
+        </svg>
+    </button>
+</div>
