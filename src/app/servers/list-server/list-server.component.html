@@ -39,7 +39,9 @@
               </thead>
               <tbody>
                 <tr *ngFor="let server of serverState.serverData.data.servers;">
-                  <td class="tw-border-t p-2">imag</td>
+                  <td class="tw-border-t p-2">
+                    <img [src]="server.imageUrl" width="40px" height="40px" [alt]="server.name" alt="">
+                  </td>
                   <td class="tw-border-t p-2">{{server.ipAddress}}</td>
                   <td class="tw-border-t p-2">{{server.name}}</td>
                   <td class="tw-border-t p-2">{{server.memory}}</td>
@@ -50,8 +52,8 @@
                     </span>
                   </td>
                   <td class="tw-border-t tw-p-2">
-                    <button (click)="pingServer()">
-                      <span  *ngIf="(filterStatus$ | async) === '' || (filterStatus$ | async) !== server.ipAddress">
+                    <a (click)="pingServer(server.ipAddress)">
+                      <span *ngIf="(filterStatus$ | async) === '' || (filterStatus$ | async) !== server.ipAddress" class="material-symbols-outlined tw-cursor-pointer tw-text-red-600">
                         <svg width="50px" height="50px" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#ce2e12" stroke="#ce2e12">
 
                           <g id="SVGRepo_bgCarrier" stroke-width="0"/>
@@ -78,7 +80,7 @@
                           
                         </svg>
                       </span>
-                      <span  *ngIf="(filterStatus$ | async) === server.ipAddress">
+                      <span *ngIf="(filterStatus$ | async) === server.ipAddress" class="material-symbols-outlined tw-cursor-pointer tw-text-green-600">
                         <svg width="50px" height="50px" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#2e2bee">
 
                           <g id="SVGRepo_bgCarrier" stroke-width="0"/>
@@ -105,7 +107,7 @@
                           
                         </svg>
                       </span>
-                    </button>
+                    </a>
                   </td>
 
                   <td class="tw-border-t tw-p-2 tw-flex tw-gap-2 tw-items-end">

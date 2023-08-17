@@ -28,6 +28,11 @@ export class ServersService {
     tap(console.log),
     catchError(this.handleError)
   )
+  
+  pingServer$ = (serverIpAddress: string) => <Observable<ServerResponse>> this.http.get<ServerResponse>(`${this.apiUrl}/server/ping/${serverIpAddress}`).pipe(
+    tap(console.log),
+    catchError(this.handleError)
+  )
 
   delete$ = (serverId: number) => <Observable<ServerResponse>> this.http.delete<ServerResponse>(`${this.apiUrl}/server/delete/${serverId}`).pipe(
     tap(console.log),

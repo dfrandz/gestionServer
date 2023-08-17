@@ -19,7 +19,7 @@ export class ListServerComponent implements OnInit{
 
   dtOptions: DataTables.Settings = {};
   dtTrigger: Subject<any> = new Subject<any>();
-  // showModal : boolean = false;
+  
   private isLoading = new BehaviorSubject<boolean>(false);
   isLoading$ = this.isLoading.asObservable();
 
@@ -78,8 +78,26 @@ export class ListServerComponent implements OnInit{
     )
   }
 
-  pingServer = () =>{
-    console.log('ping')
+  pingServer = (serverIpAddres:string) =>{
+    this.filterSubject.next(serverIpAddres);
+    this.serverState$ = this.serverService.pingServer$(serverIpAddres).pipe(
+      map( response => {
+        //get server Index who i can to get
+        const index =this.serverSubject.value.data.servers.findIndex( server => server.id == response.data.server.id);
+        this.serverSubject.value.data.servers[index] = response.data.server;
+        this.filterSubject.next('');
+        if(response.message === 'Ping success')
+          this.notifierService.onSucces(response.message);
+        else
+        this.notifierService.onInfo(response.message);
+        return {dataState: DataInfo.LOADED_STATE, serverData: this.serverSubject.value}
+      }),
+      startWith({dataState: DataInfo.LOADING_STATE, serverData: this.serverSubject.value}),
+      catchError( (error:string) =>{
+        this.notifierService.onError('Ping error');
+        return of({ dataState: DataInfo.ERROR_STATE, error:error})
+      })
+    )
   }
 
 
